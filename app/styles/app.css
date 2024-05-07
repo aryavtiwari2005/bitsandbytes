@@ -982,6 +982,10 @@ nav .links .get-in-touch {
         width: 100%;
     }
 
+    .process .process-slider .content h2 {
+        font-size: 36px;
+    }
+
     .process .process-slider img {
         width: 300px;
     }
