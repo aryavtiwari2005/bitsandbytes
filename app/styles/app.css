@@ -164,7 +164,7 @@ nav .get-in-touch .btn:hover {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    padding-top: 300px;
+    padding-top: 350px;
     background-color: #ead4d4;
     font-family: "DM Sans", sans-serif;
 }
@@ -301,15 +301,20 @@ nav .get-in-touch .btn:hover {
     -ms-user-select: none;
     display: flex;
     justify-content: space-between;
-    padding: 100px 50px;
+    padding: 70px 50px;
     background: #ead4d4;
     font-family: "DM Sans", sans-serif;
     position: relative;
-    height: 30vw;
+    height: max-content;
 }
 
 .testimonials .testimonial {
     overflow-x: hidden;
+}
+
+.testimonials .slider {
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonials h1 {
@@ -320,10 +325,9 @@ nav .get-in-touch .btn:hover {
 }
 
 .testimonials .controls {
-    position: absolute;
-    right: 5%;
-    bottom: 20%;
+    align-self: center;
     display: flex;
+    margin-top: 20px;
 }
 
 .testimonials .controls .next,
