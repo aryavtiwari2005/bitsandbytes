@@ -1,8 +1,10 @@
 import Component from '@ember/component';
+import Ember from "ember"
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const changeContent = (progress) => {
+  if (!document.querySelector('.process')) return
   const heading = document.querySelector(
     '.process .process-slider .content h2',
   );
@@ -42,22 +44,53 @@ const changeContent = (progress) => {
   }
 };
 
+var onPage = true;
+
+const renderProcess = (progress) => {
+  const progressBar = document.querySelector(
+    '.process .progress-bar span.whole-progress',
+  );
+  if (!progressBar) return
+  setInterval(() => {
+    if (!onPage) return
+    if (progress >= 100) {
+      progress = 0;
+    }
+    progress += 0.0166;
+    progressBar.style.width = `${progress}%`;
+    changeContent(progress);
+  }, 10);
+}
+
 export default Component.extend({
   progress: 0,
+  // router: Ember.inject.service("-routing"),
   didInsertElement() {
     this._super(...arguments);
-    const progressBar = document.querySelector(
-      '.process .progress-bar span.whole-progress',
-    );
-    setInterval(() => {
-      if (this.progress >= 100) {
-        this.progress = 0;
-      }
-      this.progress += 0.0166;
-      progressBar.style.width = `${this.progress}%`;
-      changeContent(this.progress);
-    }, 10);
+    this.progress = 0
+    renderProcess(this.progress)
+
+    // let r = this.get("router");
+    // r.addObserver("currentRouteName", this, "currentRouteNameChanged");
   },
+  didRender() {
+    this._super(...arguments)
+    this.progress = 0
+    renderProcess(this.progress)
+  },
+  // "currentRouteNameChanged": function (router, propertyName) {
+  //   console.log(router.get("currentRouteName"));
+  //   if (router.get("currentRouteName") != "index") {
+  //     this.progress = 0
+  //     changeContent(this.progress)
+  //     onPage = false
+  //   }
+  //   if (router.get("currentRouteName") == "index") {
+  //     this.progress = 0
+  //     changeContent(this.progress)
+  //     onPage = true
+  //   }
+  // },
   actions: {
     contentChanger(name) {
       const heading = document.querySelector(

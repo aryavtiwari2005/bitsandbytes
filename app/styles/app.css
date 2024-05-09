@@ -22,6 +22,14 @@ nav {
     transition: transform 1s;
 }
 
+nav .tray-icon {
+    display: none;
+}
+
+nav .links .get-in-touch {
+    display: none;
+}
+
 nav.animated {
     transform: translateY(-100%);
     transition: transform 1s;
@@ -73,6 +81,11 @@ nav .links ul li:hover::after {
     transform-origin: left;
     transform: scaleX(1);
     transition: transform 0.5s ease-in-out;
+}
+
+nav .links ul li a {
+    text-decoration: none;
+    color: white;
 }
 
 nav .get-in-touch .btn {
@@ -745,12 +758,218 @@ nav .get-in-touch .btn:hover {
     transition: background-color 0.5s;
 }
 
-nav .tray-icon {
-    display: none;
+.services-page {
+    padding: 50px;
+    padding-top: 150px;
+    background-color: #ead4d4;
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-nav .links .get-in-touch {
-    display: none;
+.services-page h1 {
+    font-size: 96px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 0;
+    animation: landingContent 1.5s;
+}
+
+.services-page h1 span {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.services-page p {
+    color: #333;
+    margin: 0;
+    width: 70%;
+    font-size: 42px;
+    animation: landingContent 1.5s;
+}
+
+.services-page p.faded {
+    color: #33333370;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+
+.services-page img {
+    margin: 30px 0;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    animation: landingContent 1.5s;
+}
+
+.services-page .slider {
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid #333;
+    margin: 50px 0;
+    position: relative;
+    left: 100%;
+}
+
+.services-page .slider h2 {
+    font-size: 96px;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+}
+
+.services-page .slider .list {
+    display: flex;
+}
+
+.services-page .slider .list ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 100px;
+}
+
+.services-page .slider .list ul li {
+    font-size: 24px;
+    color: #33333370;
+}
+
+.services-page .slider.first {
+    width: 100%;
+}
+
+.services-page .slider.second {
+    width: 80%;
+    align-self: flex-end;
+}
+
+.services-page .slider.third {
+    width: 60%;
+    align-self: flex-end;
+}
+
+.services-page span.line {
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    margin: 30px 0;
+}
+
+.services-page .approach {
+    margin-top: 20px;
+}
+
+.services-page .approach .header {
+    font-size: 30px;
+    color: #33333370;
+    font-weight: 600;
+}
+
+.services-page .approach .content {
+    font-size: 32px;
+    color: #333;
+    width: 80%;
+    font-weight: 600;
+}
+
+.services-page .approach .line2 {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin-top: 50px;
+}
+
+.services-page .approach .cards {
+    display: flex;
+}
+
+.services-page .approach .cards div {
+    width: 20%;
+    padding-right: 100px;
+    position: relative;
+}
+
+.services-page .approach .cards div h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.services-page .approach .cards div h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #33333370;
+}
+
+.services-page .approach .cards div .dot {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: #333;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    margin-bottom: 10px;
+}
+
+.services-page .approach .cards .card1 {
+    left: 20%;
+}
+
+.services-page .approach .cards .card2 {
+    left: 60%;
+} 
+
+.services-page .approach .cards .card3 {
+    left: 100%;
+}
+
+.services-page .promise .header {
+    font-size: 30px;
+    color: #33333370;
+    font-weight: 600;
+}
+
+.services-page .promise .cards {
+    display: flex;
+    margin-top: 20px;
+}
+
+.services-page .promise .cards div {
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #e2c1c1;
+    position: relative;
+}
+
+.services-page .promise .cards div h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.services-page .promise .cards div h3 {
+    font-size: 18px;
+    color: #33333370;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.services-page .promise .cards .card1 {
+    left: 25%;
+}
+
+.services-page .promise .cards .card2 {
+    left: 50%;
+}
+
+.services-page .promise .cards .card3 {
+    left: 75%;
+}
+
+.services-page .promise .cards .card4 {
+    left: 100%;
 }
 
 @media only screen and (max-width: 650px) {
@@ -794,7 +1013,7 @@ nav .links .get-in-touch {
     nav .tray-icon .line2.toggled {
         transform: rotate(-45deg);
     }
-    
+
     nav {
         position: fixed;
         z-index: 999;
@@ -981,7 +1200,7 @@ nav .links .get-in-touch {
         width: 100%;
         margin: 20px 0;
     }
-    
+
     .process .process-slider .content {
         width: 100%;
     }
@@ -994,7 +1213,7 @@ nav .links .get-in-touch {
         width: 300px;
     }
 
-    .process .progress-bar  {
+    .process .progress-bar {
         margin: 0;
         width: 100%;
     }
@@ -1096,5 +1315,91 @@ nav .links .get-in-touch {
         margin: 0;
         margin-top: 5px;
         margin-bottom: 20px;
+    }
+
+    .services-page {
+        padding: 20px;
+        padding-top: 150px;
+    }
+
+    .services-page h1 {
+        font-size: 48px;
+        width: 100%;
+    }
+
+    .services-page p.faded {
+        font-size: 24px;
+    }
+
+    .services-page p {
+        font-size: 27px;
+        width: 100%;
+    }
+
+    .services-page .slider h2 {
+        font-size: 48px;
+    }
+
+    .services-page .slider .list {
+        flex-direction: column;
+    }
+
+    .services-page .slider .list ul li {
+        font-size: 18px;
+    }
+
+    .services-page .slider .list ul {
+        margin: 0;
+    }
+
+    .services-page .slider.second {
+        width: 100%;
+    }
+
+    .services-page .slider.third {
+        width: 100%;
+    }
+
+    .services-page .approach .header {
+        font-size: 30px;
+    }
+
+    .services-page .approach .content {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .services-page .approach .line2 {
+        display: none;
+    }
+
+    .services-page .approach .cards .dot {
+        display: none;
+    }
+
+    .services-page .approach .cards {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .services-page .approach .cards div {
+        width: 100%;
+    }
+
+    .services-page .promise .header {
+        font-size: 30px;
+    }
+
+    .services-page .promise .cards {
+        flex-direction: column;
+    }
+
+    .services-page .promise .cards div {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .services-page .promise .cards div h3 {
+        margin-top: 10px;
     }
 }
