@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import $ from "jquery"
+import $ from 'jquery';
 
 const navToggle = (toggle) => {
   const lines = document.querySelectorAll('nav .tray-icon div');
@@ -45,16 +45,16 @@ const renderNav = () => {
     } else if (scroll <= 100) {
       nav.classList.remove('changed');
     }
-  })
-}
+  });
+};
 
 export default Component.extend({
   didInsertElement() {
     this._super(...arguments);
-    renderNav()
+    renderNav();
   },
   didRender() {
-    this._super(...arguments)
-    renderNav()
-  }
+    this._super(...arguments);
+    renderNav();
+  },
 });

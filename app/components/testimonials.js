@@ -62,7 +62,7 @@ export default Component.extend({
     nextFunc(this.review, this.reviewer, this.company, false);
   },
   didRender() {
-    this._super(...arguments)
+    this._super(...arguments);
     nextFunc(this.review, this.reviewer, this.company, false);
   },
   actions: {

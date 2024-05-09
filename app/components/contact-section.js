@@ -22,15 +22,15 @@ const renderContact = () => {
         btn.value = 'Success!';
       });
   });
-}
+};
 
 export default Component.extend({
   didInsertElement() {
     this._super(...arguments);
-    renderContact()
+    renderContact();
   },
   didRender() {
-    this._super(...arguments)
-    renderContact()
-  }
+    this._super(...arguments);
+    renderContact();
+  },
 });

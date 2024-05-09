@@ -6,10 +6,10 @@ const renderServices = () => {
   $(window).scroll(function () {
     var elements = [
       $('.recent-works .work'),
-      $('.services .cards, .services h1, .services p')
+      $('.services .cards, .services h1, .services p'),
     ];
     elements.forEach((element) => {
-      if (!element.offset()) return
+      if (!element.offset()) return;
       var isInView =
         element.offset().top < $(window).scrollTop() + $(window).height();
 
@@ -19,15 +19,15 @@ const renderServices = () => {
       }
     });
   });
-}
+};
 
 export default Component.extend({
   didInsertElement() {
     this._super(...arguments);
-    renderServices()
+    renderServices();
   },
   didRender() {
-    this._super(...arguments)
-    renderServices()
-  }
+    this._super(...arguments);
+    renderServices();
+  },
 });
