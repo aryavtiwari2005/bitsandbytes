@@ -37,14 +37,14 @@ const numController = (num, review, reviewer, company, direction) => {
     nextFunc(review, reviewer, company, (direction = direction));
   } else if (num == 1) {
     nextFunc(
-      `"The Bits and Bytes team was nothing but highly professional, incredibly efficient, quick to respond, and organized. We are ecstatic about the finished product & would definitely recommend them."`,
+      `"The Bits and Bytes team was highly professional, incredibly efficient, quick to respond, and organized. We are ecstatic about the finished product & would definitely recommend them."`,
       'Vedant Rawat',
       'Global head of Fab n Fit',
       (direction = direction),
     );
   } else if (num == 2) {
     nextFunc(
-      `"I cannot recommend Bits and Bytes highly enough. They are incredibly professional, as well as talented. I relied on them heavily for best practices and to take our website to the next level.`,
+      `"Bits and Bytes is an outstanding choice. They are incredibly professional, as well as talented. I relied on them heavily for best practices and to take our website to the next level."`,
       'Samarth Aggarwal',
       'Executive at Casero Games',
       (direction = direction),
