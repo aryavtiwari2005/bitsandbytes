@@ -731,8 +731,9 @@ nav .get-in-touch .btn:hover {
   color: #ead4d470;
 }
 
-.contact-section form .inputBox input:focus ~ span,
-.contact-section form .inputBox input:valid ~ span {
+.contact-section form .inputBox input:focus~span,
+.contact-section form .inputBox input:valid~span,
+.contact-section form .inputBox input[value]~span {
   color: #ead4d4;
   font-size: 16px;
   transform: translateY(-20px);
@@ -1751,7 +1752,7 @@ nav .get-in-touch .btn:hover {
   width: 20px;
   height: 4px;
   border-radius: 50%;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   top: 62px;
   transform-origin: 50%;
