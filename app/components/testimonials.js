@@ -38,15 +38,15 @@ const numController = (num, review, reviewer, company, direction) => {
   } else if (num == 1) {
     nextFunc(
       `"The Bits and Bytes team was highly professional, incredibly efficient, quick to respond, and organized. We are ecstatic about the finished product & would definitely recommend them."`,
-      'Vedant Rawat',
-      'Global head of Fab n Fit',
+      'Nishant Sirotra',
+      'CEO of Prescribio',
       (direction = direction),
     );
   } else if (num == 2) {
     nextFunc(
       `"Bits and Bytes is an outstanding choice. They are incredibly professional, as well as talented. I relied on them heavily for best practices and to take our website to the next level."`,
-      'Samarth Aggarwal',
-      'Executive at Casero Games',
+      'Apoorva Tripathi',
+      'CEO of Arttachment',
       (direction = direction),
     );
   }
