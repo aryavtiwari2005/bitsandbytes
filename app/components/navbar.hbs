@@ -8,15 +8,26 @@
     </div>
     <div class="links">
         <ul>
-            <li>
-                <LinkTo @route='services'>Services</LinkTo>
-            </li>
-            <li>
-                <LinkTo @route='about'>About</LinkTo>
-            </li>
-            <li>
-                <LinkTo @route='careers'>Careers</LinkTo>
-            </li>
+            <LinkTo @route='services'>
+                <li>
+                    Services
+                </li>
+            </LinkTo>
+            {{!-- <LinkTo @route='pricing'>
+                <li>
+                    Pricing
+                </li>
+            </LinkTo> --}}
+            <LinkTo @route='about'>
+                <li>
+                    About
+                </li>
+            </LinkTo>
+            <LinkTo @route='careers'>
+                <li>
+                    Careers
+                </li>
+            </LinkTo>
         </ul>
         <div class="get-in-touch">
             <LinkTo @route="contact-us" class="btn">Get in touch</LinkTo>

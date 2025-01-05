@@ -1,0 +1,44 @@
+{{!-- app/components/pricing-cards.hbs --}}
+<div class="pricing-container">
+  <h1 class="header">Packages and Pricing</h1>
+  <div class="cards">
+    {{#each this.pricingPlans as |plan|}}
+      <div 
+        class="card" 
+        data-tooltip={{plan.tooltip}}
+        {{on "mouseenter" this.showTooltip}}
+        {{on "mousemove" this.updateTooltipPosition}}
+        {{on "mouseleave" this.hideTooltip}}
+      >
+        {{#if plan.isPopular}}
+          <div class="popular">Most Popular</div>
+        {{/if}}
+        
+        <h2>{{plan.title}}</h2>
+        <hr />
+        <div class="price">{{plan.price}}</div>
+        <p>{{plan.description}}</p>
+        
+        <ul>
+          {{#each plan.features as |feature|}}
+            <li class={{if feature.included "included" "not-included"}}>
+              <i class="fas fa-{{if feature.included "check" "times"}}-circle"></i>
+              {{feature.text}}
+            </li>
+          {{/each}}
+        </ul>
+        
+        <a href="#" class="button">Know More</a>
+      </div>
+    {{/each}}
+  </div>
+
+  {{#if this.isTooltipVisible}}
+    <div 
+      class="tooltip" 
+      style="left: {{this.tooltipPosition.x}}px; top: {{this.tooltipPosition.y}}px;"
+    >
+      {{this.tooltipContent}}
+    </div>
+  {{/if}}
+</div>
