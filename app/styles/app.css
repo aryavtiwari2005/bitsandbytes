@@ -55,6 +55,7 @@ nav .links ul {
 nav .links ul li {
   font-size: 19px;
   padding: 10px 20px;
+  text-decoration: none !important;
   color: #e7e7e7;
   cursor: pointer;
   position: relative;
@@ -83,7 +84,7 @@ nav .links ul li:hover::after {
   transition: transform 0.5s ease-in-out;
 }
 
-nav .links ul li a {
+nav .links ul a {
   text-decoration: none;
   color: white;
 }
