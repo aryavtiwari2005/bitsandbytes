@@ -1337,6 +1337,7 @@ nav .get-in-touch .btn:hover {
 .about-us .our-team .team-grid div img {
   width: 200px;
   height: 200px;
+  object-fit: cover;
 }
 
 .about-us .our-team .team-grid div h2 {
