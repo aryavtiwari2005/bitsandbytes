@@ -1,3 +1,4 @@
+// /components/aboutus.hbs
 import Component from '@ember/component';
 
 const changeValues = (toggle, num) => {
